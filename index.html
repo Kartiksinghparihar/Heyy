@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K&K</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff66a3;
+        }
+        .heart {
+            color: #ff66a3;
+            font-size: 100px;
+        }
+        .btn {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff66a3;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kya Tum Mujhe Pareshaan Krti Ho?</h1>
+    <div class="heart">💐</div>
+    <button class="btn" onclick="yes()">Yes</button>
+    <button class="btn" id="noBtn">No</button>
+
+    <script>
+        function yes() {
+            alert("I knew it! ❤️");
+        }
+
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            this.style.position = "absolute";
+            this.style.top = Math.random() * (window.innerHeight - this.offsetHeight) + "px";
+            this.style.left = Math.random() * (window.innerWidth - this.offsetWidth) + "px";
+        });
+    </script>
+</body>
+</html>
